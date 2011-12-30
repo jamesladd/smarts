@@ -30,3 +30,19 @@ class ExampleStringReader < Reader
     Example.new # this isnt a proper Reader implementation, just an Example.
   end
 end
+
+class Printer
+  def print(source)
+    source.print_using(self)
+  end
+end
+
+class ExampleStringPrinter < Printer
+  def initialize(source)
+  end
+  def start
+  end
+  def finish
+    'an Example' # this isnt a proper Reader implementation, just an Example.
+  end
+end
