@@ -1,7 +1,6 @@
 require_relative 'spec_helper'
 
-describe 'Smarts' do
-
+describe Smarts do
   describe 'mixin' do
 
     class Example
@@ -9,7 +8,9 @@ describe 'Smarts' do
     end
 
     subject { Example.new }
-    it { subject.should respond_to(:store_on) }
-  end
 
+    it { subject.should respond_to(:store_on) }
+    it { subject.class.should respond_to(:from) }
+
+  end
 end

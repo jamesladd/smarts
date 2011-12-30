@@ -1,5 +1,5 @@
 require_relative 'smarts/smarts'
-require_relative 'smarts/storing'
+require_relative 'smarts/persistence'
 
 class Class
   def add_smarts
