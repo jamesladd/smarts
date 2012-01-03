@@ -11,23 +11,27 @@ class Reader
   end
 end
 
-class ExampleStringWriter < Writer
-  def initialize(target)
-  end
-  def start
-  end
-  def finish
-    'Example'  # this isnt a proper Writer implementation, just an Example.
+class Example
+  class StringWriter < Writer
+    def initialize(target)
+    end
+    def start
+    end
+    def finish
+      'Example'  # this isnt a proper Writer implementation, just an Example.
+    end
   end
 end
 
-class ExampleStringReader < Reader
-  def initialize(source)
-  end
-  def start
-  end
-  def finish
-    Example.new # this isnt a proper Reader implementation, just an Example.
+class Example
+  class StringReader < Reader
+    def initialize(source)
+    end
+    def start
+    end
+    def finish
+      Example.new # this isnt a proper Reader implementation, just an Example.
+    end
   end
 end
 
@@ -37,13 +41,15 @@ class Printer
   end
 end
 
-class ExampleStringPrinter < Printer
-  def initialize(source)
-  end
-  def start
-  end
-  def finish
-    'an Example' # this isnt a proper Printer implementation, just an Example.
+class Example
+  class StringPrinter < Printer
+    def initialize(source)
+    end
+    def start
+    end
+    def finish
+      'an Example' # this isnt a proper Printer implementation, just an Example.
+    end
   end
 end
 
@@ -53,12 +59,14 @@ class Converter
   end
 end
 
-class ExampleStringConverter < Converter
-  def initialize(source)
-  end
-  def start
-  end
-  def finish
-    'an Example' # this isnt a proper Converter implementation, just an Example.
+class Example
+  class StringConverter < Converter
+    def initialize(source)
+    end
+    def start
+    end
+    def finish
+      'an Example' # this isnt a proper Converter implementation, just an Example.
+    end
   end
 end

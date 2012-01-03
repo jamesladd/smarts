@@ -7,8 +7,8 @@ module Smarts
     include Support
 
     def convert_to(target)
-      converter_class_name = name_for(:converting, self.class, target)
-      converter_class = eval(converter_class_name)
+      converter_class_name = name_for(:converting, target)
+      converter_class = resolve_for(converter_class_name, self.class)
       converter = converter_class.new(target)
       with(converter, :convert)
     end

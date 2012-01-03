@@ -2,8 +2,12 @@ module Support
 
   private
 
-  def name_for(action, source, target)
-    "::#{source.name}#{target.class.name}#{to_verb(action)}"
+  def name_for(action, target)
+    "#{target.class.name}#{to_verb(action)}"
+  end
+
+  def resolve_for(aClassName, aClass)
+    Module.const_get(aClass.name).const_get(aClassName)
   end
 
   def to_verb(action)

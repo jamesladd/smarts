@@ -7,8 +7,8 @@ module Smarts
     include Support
 
     def print_on(target)
-      printer_class_name = name_for(:printing, self.class, target)
-      printer_class = eval(printer_class_name)
+      printer_class_name = name_for(:printing, target)
+      printer_class = resolve_for(printer_class_name, self.class)
       printer = printer_class.new(target)
       with(printer, :print)
     end
