@@ -43,6 +43,22 @@ class ExampleStringPrinter < Printer
   def start
   end
   def finish
-    'an Example' # this isnt a proper Reader implementation, just an Example.
+    'an Example' # this isnt a proper Printer implementation, just an Example.
+  end
+end
+
+class Converter
+  def convert(source)
+    source.convert_using(self)
+  end
+end
+
+class ExampleStringConverter < Converter
+  def initialize(source)
+  end
+  def start
+  end
+  def finish
+    'an Example' # this isnt a proper Converter implementation, just an Example.
   end
 end

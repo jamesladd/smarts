@@ -7,7 +7,7 @@ module Support
   end
 
   def to_verb(action)
-    @to_verb_map ||= { :writing => 'Writer', :reading => 'Reader', :printing => 'Printer'}
+    @to_verb_map ||= { :writing => 'Writer', :reading => 'Reader', :printing => 'Printer', :converting => 'Converter'}
     @to_verb_map[action]
   end
 
