@@ -26,10 +26,12 @@ into descreet units, with each unit loaded dynamically enabling new functions to
 the original object or effecting the existing functions the object performs. Adding SMARTS to your Ruby 
 class is as simple as the following:
 
+~~~
   require 'smarts'
   class Customer
     add_smarts
   end
+~~~
 
 With the addition of SMARTS your object can now perform functions like reading, writing, printing, 
 representation and transformation in a simple and extensible manner. In addition, the functions that
@@ -54,7 +56,9 @@ SMARTS determines which object implements a function by using the name of the ob
 object and a noun representing the operation to be performed derived from the method. For example; given a 
 customer instance being written to a database with a call like: 
 
+~~~
   customer.store_on(database) 
+~~~
 
 SMARTS will load the object DatabaseWriter from the list of constants in the Customer name space, or look for 
 the global DatabaseWriter class. Typically a file database_writer.rb in the 'customer' folder would define the
@@ -64,8 +68,10 @@ folder defines the things a Customer object can do.
 
 A DatabaseWriter in the Customer name space is defined like this:
 
+~~~
   class Customer
     class DatabaseWriter
     end
   end
+~~~
 
