@@ -1,6 +1,6 @@
--- this is a rough draft -- 
+# Object SMARTS
 
-Object SMARTS 
+** this is a rough draft **
 
 Have you ever looked at some code and wondered what it does, and where to start looking to find out?
 I mean a deeper understanding than what methods a class has, like its responsibilities and its 
@@ -19,16 +19,17 @@ achieving it and still keep your classes usable and simple?
 
 What if there was a way and it was as simple as putting a file into a load path?
 
+## Details 
 
 SMARTS is an approach to organising your objects so that the various functions they perform are decoupled
 into descreet units, with each unit loaded dynamically enabling new functions to be added without modifying
 the original object or effecting the existing functions the object performs. Adding SMARTS to your Ruby 
 class is as simple as the following:
 
-require 'smarts'
-class Customer
-  add_smarts
-end
+  require 'smarts'
+  class Customer
+    add_smarts
+  end
 
 With the addition of SMARTS your object can now perform functions like reading, writing, printing, 
 representation and transformation in a simple and extensible manner. In addition, the functions that
@@ -37,8 +38,8 @@ add new capabilities easier - add a new class to the class' namespace and you ar
 
 After SMARTS are added your object can do things things like the following:
 
-Customer.read_from(database).convert_to(json).store_on(httpResponse)
-<- read a Customer from a database and write it to a httpResponse in json format.
+  Customer.read_from(database).convert_to(json).store_on(httpResponse)
+_ read a Customer from a database and write it to a httpResponse in json format._
 
 The are no limits to the source, destination or transformation you can apply to your object, since these
 are loaded from your objects name space. In the example above, all the Customer related functions are 
@@ -63,8 +64,8 @@ folder defines the things a Customer object can do.
 
 A DatabaseWriter in the Customer name space is defined like this:
 
-class Customer
-  class DatabaseWriter
+  class Customer
+    class DatabaseWriter
+    end
   end
-end
 
