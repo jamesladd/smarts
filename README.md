@@ -42,8 +42,8 @@ After SMARTS are added your object can do things things like the following:
 
 ~~~
   Customer.read_from(database).convert_to(json).store_on(httpResponse)
+  # read a Customer from a database and write it to a httpResponse in json format.
 ~~~
-_ read a Customer from a database and write it to a httpResponse in json format._
 
 The are no limits to the source, destination or transformation you can apply to your object, since these
 are loaded from your objects name space. In the example above, all the Customer related functions are 
