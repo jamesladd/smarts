@@ -1,6 +1,6 @@
 # Object SMARTS
 
-** this is a rough draft **
+## ** this is a rough draft **
 
 Have you ever looked at some code and wondered what it does, and where to start looking to find out?
 I mean a deeper understanding than what methods a class has, like its responsibilities and its 
